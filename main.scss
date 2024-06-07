@@ -1,0 +1,33 @@
+@import "./variables.scss";
+
+html {
+  background: $background-color;
+  width: 100vw;
+}
+
+body {
+  margin: 0.5rem;
+}
+
+.main-content {
+  display: flex;
+  border-radius: 1rem;
+  background-image: url("image-1.jpg");
+  justify-content: center;
+  height: 80vh;
+  width: auto;
+  margin: 0;
+  nav {
+    font-family: $header-font;
+    width: 80%;
+    margin-top: 2rem;
+    max-width: 50rem;
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
