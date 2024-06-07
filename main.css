@@ -8,6 +8,11 @@ body {
   margin: 0.5rem;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .main-content {
   display: flex;
   border-radius: 1rem;
@@ -27,8 +32,40 @@ body {
   list-style: none;
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   margin: 0;
   padding: 0;
+}
+
+.main-nav {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+}
+.main-nav ul li {
+  padding: 0 1rem;
+  letter-spacing: 0.05rem;
+}
+.main-nav ul li a:hover, .main-nav ul li a:focus {
+  text-shadow: 0 0 0.3px;
+}
+
+.logo {
+  letter-spacing: 0.6rem;
+  font-size: large;
+  font-weight: bold;
+}
+
+.login {
+  padding: 0.5rem 1.5rem;
+  background: rgba(0, 0, 0, 0.603);
+  color: #eef7ff;
+  border-radius: 20px;
+}
+.login:hover, .login:active {
+  background: rgba(0, 0, 0, 0.5);
+  scale: 1.02;
 }
 
 /*# sourceMappingURL=main.css.map */
