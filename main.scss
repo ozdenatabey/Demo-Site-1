@@ -3,6 +3,7 @@
 html {
   background: $background-color;
   width: 100vw;
+  font-variant: no-common-ligatures;
 }
 
 body {
@@ -87,17 +88,21 @@ a {
 .hero-ctn {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "hero-ctn__text hero-ctn__goal"
+    "hero-ctn__title hero-ctn__title"
+    "hero-ctn__search hero-ctn__search";
   align-items: center;
   justify-content: center;
   height: fit-content;
-  width: 60%;
+  width: 65vw;
   margin: 1rem auto;
-  border: 1px transparent solid;
   border-radius: 30px;
   text-shadow: 0 0 1rem black;
   font-family: $content-font;
   backdrop-filter: blur(1.5px);
-  background: linear-gradient(0deg, rgba(0, 213, 255, 0.053), transparent);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), transparent);
   color: $background-color;
 }
 .hero-ctn__text {
@@ -106,7 +111,8 @@ a {
   align-items: center;
   margin-right: 1rem;
   h1 {
-    font-size: 3rem;
+    // font-size: 3rem;
+    font-size: 3vw;
     font-weight: 300;
     margin: 0;
     letter-spacing: 0.2rem;
@@ -120,7 +126,8 @@ a {
   height: 100%;
   p {
     letter-spacing: 0.5rem;
-    font-size: 4rem;
+    // font-size: 4rem;
+    font-size: 4vw;
     font-weight: 600;
     position: absolute;
     opacity: 0;
@@ -161,5 +168,80 @@ a {
   100% {
     opacity: 0;
     transform: translateY(3rem);
+  }
+}
+
+.hero-ctn__title {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  justify-self: center;
+  h2 {
+    font-weight: 500;
+    font-size: 2vw;
+    letter-spacing: 0.2rem;
+    text-wrap: nowrap;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.hero-ctn__search {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  margin: 0.5rem 1rem;
+  border-radius: 20px;
+  letter-spacing: 0.05rem;
+  width: 40vw;
+  margin: auto;
+  font-size: 1.5vw;
+  .dropdown {
+    position: relative;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    p {
+      opacity: 0;
+      right: 0;
+      transform: translateY(-2rem);
+      position: absolute;
+      background: rgba(255, 255, 255);
+      border-radius: 20px;
+      padding: 1rem;
+      color: black;
+    }
+    &:hover p {
+      animation: expandContent 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28)
+        forwards;
+    }
+  }
+  button {
+    padding: 0.2rem 1rem;
+    margin: 0.2rem;
+    background: $background-color;
+    color: black;
+    font: inherit;
+    font-weight: 500;
+    border: none;
+    border-radius: 30px;
+    margin-left: 1rem;
+    &:hover,
+    &:active {
+      background: rgb(218, 255, 71);
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes expandContent {
+  0% {
+    transform: translateY(-2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0.2rem);
+    opacity: 1;
   }
 }
