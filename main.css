@@ -167,7 +167,7 @@ a {
 }
 .hero-ctn__title h2 {
   font-weight: 500;
-  font-size: 2vw;
+  font-size: 1.5vw;
   letter-spacing: 0.2rem;
   text-wrap: nowrap;
   margin-top: 1rem;
@@ -186,12 +186,18 @@ a {
   letter-spacing: 0.05rem;
   width: 40vw;
   margin: auto;
-  font-size: 1.5vw;
+  font-size: 1rem;
 }
 .hero-ctn__search .dropdown {
   position: relative;
   padding: 0.5rem 1rem;
   margin: 0;
+}
+.hero-ctn__search .dropdown svg {
+  height: inherit;
+  width: inherit;
+  vertical-align: text-top;
+  padding-right: 0.5rem;
 }
 .hero-ctn__search .dropdown p {
   opacity: 0;
@@ -217,6 +223,11 @@ a {
   border-radius: 30px;
   margin-left: 1rem;
 }
+.hero-ctn__search button svg {
+  height: inherit;
+  width: inherit;
+  vertical-align: middle;
+}
 .hero-ctn__search button:hover, .hero-ctn__search button:active {
   background: rgb(218, 255, 71);
   cursor: pointer;
@@ -228,7 +239,7 @@ a {
     opacity: 0;
   }
   100% {
-    transform: translateY(0.2rem);
+    transform: translateY(-1rem);
     opacity: 1;
   }
 }
