@@ -92,9 +92,11 @@ a {
   border-radius: 20px;
 }
 .login:hover, .login:active {
-  background: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(90deg, rgb(218, 255, 71), turquoise);
+  box-shadow: 0 0 5px black;
   scale: 1.02;
   cursor: pointer;
+  color: black;
 }
 
 .hero {
@@ -251,7 +253,7 @@ a {
   vertical-align: middle;
 }
 .hero-ctn__search button:hover, .hero-ctn__search button:active {
-  background: rgb(218, 255, 71);
+  background: linear-gradient(90deg, rgb(218, 255, 71), turquoise);
   cursor: pointer;
 }
 
@@ -284,6 +286,10 @@ a {
   padding: 0.5rem 1.5rem;
   align-items: center;
   box-shadow: 0 0 20px 1px black;
+}
+.hero-cards .hero-card__item:hover {
+  scale: 1.05;
+  background: linear-gradient(90deg, rgb(218, 255, 71), turquoise);
 }
 .hero-cards .hero-card__item h1 {
   margin: 0;
