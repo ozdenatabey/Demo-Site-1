@@ -256,3 +256,30 @@ a {
     opacity: 1;
   }
 }
+
+.hero-cards {
+  position: relative;
+  width: 70vw;
+  margin: auto;
+  top: 12vh;
+  display: flex;
+  font-family: $content-font;
+  justify-content: space-evenly;
+  height: fit-content;
+  .hero-card__item {
+    display: flex;
+    flex-direction: column;
+    width: 9rem;
+    background: $background-color;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    align-items: center;
+    box-shadow: 0 0 20px 1px black;
+    h1 {
+      margin: 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
+}
