@@ -379,5 +379,19 @@ a {
     box-shadow: 0 0 20px black;
   }
 }
+footer {
+  background: black;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  padding: 1.5rem;
+}
+footer h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+footer p {
+  font-size: 1rem;
+  font-weight: 300;
+}
 
 /*# sourceMappingURL=main.css.map */
